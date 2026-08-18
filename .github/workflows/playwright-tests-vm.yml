@@ -27,6 +27,8 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
+        env:
+          PLAYWRIGHT_DOWNLOAD_HOST: https://playwright.download.prss.microsoft.com/dbazure
 
       - name: Run Playwright tests
         run: npx playwright test --project=e2e
