@@ -1,18 +1,16 @@
-name: Playwright Tests (Playwright Docker Image) 
+name: Playwright Tests (Playwright Docker image)
 
 on:
-  push:
-    branches: [ main, github-actions ]
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.62.1-noble
+      image: mcr.microsoft.com/playwright:v1.57.0-noble
     env:
        HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
-       HTTP_PASSWORD: ${{ secrets.API_PASSWORD }}   
+       HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }}
 
     steps:
       - name: Checkout repository
