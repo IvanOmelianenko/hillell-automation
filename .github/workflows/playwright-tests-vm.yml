@@ -1,9 +1,8 @@
 name: Playwright Tests (VM)
 
-# on:
-#   push:
-#     branches: [ main, github-actions ]
-
+on:
+    workflow_dispatch:
+    
 env:
   HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
   HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }} 
