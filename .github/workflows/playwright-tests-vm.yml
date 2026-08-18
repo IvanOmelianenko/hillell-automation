@@ -1,6 +1,8 @@
 name: Playwright Tests (VM)
 
 on:
+  push:
+    branches: [ main, github-actions ]
   workflow_dispatch:
 
 env:
